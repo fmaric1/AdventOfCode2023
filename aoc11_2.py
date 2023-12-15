@@ -1,30 +1,22 @@
+from pathlib import Path
 
-i = 0
+file = Path(__file__).parent / "input.txt"
+map = file.read_text().split("\n")
+
+def empty_space(map):
+    i = 0
+    list = []
+    for x in map:
+        if(len(x)==x.count('.')):
+            list.append(i)
+        i +=1
+    return list
+
 coordinates = []
-counter = 0
-map = []
-row =[]
-column = []
-i = 0
-while(1):
-    x = input()
-    if(x==''):
-        break
-    if(x.count('.') == len(x)):
-        row.append(i)
-    map.append(x)
-    i+=1
-combined_strings = [''.join(chars) for chars in zip(*map)]
 
-
-i = 0
-for x in combined_strings:
-    
-    if(len(x)==x.count('.')):
-        column.append(i)
-    i +=1
-
-
+row =empty_space(map)
+mapT = [''.join(chars) for chars in zip(*map)]
+column = empty_space(mapT)
 
 for i in range(0, len(map)):
     occurrences = [index for index, hash in enumerate(map[i]) if hash == '#']
@@ -32,6 +24,7 @@ for i in range(0, len(map)):
     for y in occurrences:
        coordinates.append([i,y])
     i+=1
+
 counter = 0
 multiplier  = 1000000
 for i in range(0,len(coordinates)-1):
