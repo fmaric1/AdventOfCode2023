@@ -2,7 +2,7 @@ from pathlib import Path
 from itertools import combinations
 import re
 
-
+#Ovdje sam iskoristio Pickov theorem i Shoelace algorithm, drugi dio je slican, samo je potrebno dodatno dekodirati instrukcije
 def shoelace(points):
     area = 0
 
