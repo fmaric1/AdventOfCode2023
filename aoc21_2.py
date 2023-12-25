@@ -1,6 +1,10 @@
 from pathlib import Path
 
 
+#Prvi zadatak cuvam listu svih pozcija do kojih se moglo stici u odredenom broju koraka, te se krecem u sva 4 pravca ako je moguce
+#priv dio bi se mogao optimizovati tako sto bi se u posebnu listu prebacile pozicije koje se ponavljaju.
+#drugi dio zadatka sam poceo, ali nisam stigao zavrsiti, ideja je bila naci pattern ponavljanja i formulu
+#kako bi se jednostavnim množenjem moglo doci do rjesenja
 file = Path(__file__).parent / "input.txt"
 lines = file.read_text().split("\n")
 
