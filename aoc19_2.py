@@ -3,7 +3,10 @@ from itertools import combinations
 import re
 import copy
 
-
+#Prvi dio je samo praćenje instrukcija red po red
+# u drugom dijelu ideja je ispisati sve mogućnosti "puteva", te na kraju vidjeti koje vode u Accepted stanje
+#nakon sto smo izdvojili "prihvacene" idem kroz njihove putanje, i updateamo range za xmas varijable, kad se zavrsi put
+#pomnozimo duzine rangeova i dodamo u sumu.
 def splitIf(string):
     array = string.split("{")
     array2 = array[1][0:-1]
