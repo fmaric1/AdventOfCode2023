@@ -2,6 +2,9 @@ from pathlib import Path
 from itertools import combinations
 import re
 
+
+#Ideja je da zapamtim pozicije "zidova", te prebrojim koliko je kamenja izmedu svaka dva zida u jednom redu, te onda ih pomjerim prema gornjem zidu,
+# takoder sam na pocetku dodao zid oko cijelog inputa, kako ne bih morao gledati rubne slucajeve
 file = Path(__file__).parent / "input.txt"
 lines = file.read_text().split("\n")
 for i in range(0,len(lines)):
