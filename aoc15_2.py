@@ -1,6 +1,8 @@
 from pathlib import Path
 from itertools import combinations
 import re
+#Prvi dio je jednostavno proci kroz ulaz, i izracunati hash
+#u drugom dijelu imam niz hashmap, u koji spremam nizove koji čuvaju sadrzaj svake kutije
 
 file = Path(__file__).parent / "input.txt"
 lines = file.read_text().split(",")
